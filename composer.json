@@ -1,0 +1,21 @@
+{
+  "name": "admin/course_reports",
+  "description": "Create, edit, and organize courses to structure content or courses for easier navigation and management.",
+  "type": "library",
+  "version": "1.0.0",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "admin\\course_reports\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "admin\\course_reports\\CourseReportServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
