@@ -2,7 +2,7 @@
 
 namespace admin\course_reports\Controllers;
 
-use admin\courses\Models\CoursePurchase;
+use admin\course_transactions\Models\CoursePurchase;
 use admin\course_transactions\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
