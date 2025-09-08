@@ -141,6 +141,16 @@ class CourseReportServiceProvider extends ServiceProvider
     protected function transformControllerNamespaces($content)
     {
         // Update use statements for models and requests
+        $content = str_replace(
+            'use admin\\course_transactions\\Models\\CoursePurchase;',
+            'use Modules\\Transactions\\app\\Models\\CoursePurchase;',
+            $content
+        );
+        $content = str_replace(
+            'use admin\\course_transactions\\Models\\Transaction;',
+            'use Modules\\Transactions\\app\\Models\\Transaction;',
+            $content
+        );
         return $content;
     }
 

@@ -82,6 +82,20 @@ class PublishCourseReportsModuleCommand extends Command
             $content = str_replace($search, $replace, $content);
         }
 
+        // Handle specific file types
+        if (str_contains($sourceFile, 'Controllers')) {
+            $content = str_replace(
+                'use admin\\course_transactions\\Models\\CoursePurchase;',
+                'use Modules\\Transactions\\app\\Models\\CoursePurchase;',
+                $content
+            );
+            $content = str_replace(
+                'use admin\\course_transactions\\Models\\Transaction;',
+                'use Modules\\Transactions\\app\\Models\\Transaction;',
+                $content
+            );
+        }
+
         return $content;
     }
 
